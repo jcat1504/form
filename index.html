@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+
+<body>
+    <form class="form-inline" onsubmit=" return myFunction()">
+        <label class="required">*Task and Description* </label>
+        <div class="form-group">
+            <input type="text" class="form-control inputArea" id="task" placeholder="Task">
+        </div>
+
+        <div class="form-group">
+            <input type="text" class="form-control inputArea" id="description" placeholder="Description">
+        </div>
+        <button type="submit" class="btn btn-default submit">Submit</button>
+    </form>
+
+
+    <script>
+        function myFunction() {
+            var a = document.getElementById("task").value;
+            var b = document.getElementById("description").value;
+
+            console.log(a);
+            console.log(b);
+
+            return false;
+        }
+    </script>
+    </div>
+    </p>
+    </form>
+</body>
+
+</html>
