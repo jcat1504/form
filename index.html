@@ -1,16 +1,18 @@
 <!DOCTYPE html>
 <html>
 
+<title>Task Form</title>
+
 <body>
-    <form class="form-inline" onsubmit=" return myFunction()">
+    <form class="form-inline" name="myForm" onsubmit=" return submitForm()">
         <label class="required">*Task and Description* </label>
-        
-          <!first text box>
+
+        <!first text box>
         <div class="form-group">
             <input type="text" id="task" placeholder="Task">
         </div>
 
-      <!second comment box>
+        <!second comment box>
         <div class="form-group">
             <input type="text" id="description" placeholder="Description">
         </div>
@@ -18,17 +20,10 @@
     </form>
 
 
-    <script>
-        function myFunction() {
-            var a = document.getElementById("task").value;
-            var b = document.getElementById("description").value;
 
-            console.log(a);
-            console.log(b);
+    <script type="text/javascript " src="json.js "></script>
 
-            return false;
-        }
-    </script>
+
     </div>
     </p>
     </form>
