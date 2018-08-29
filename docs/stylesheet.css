@@ -1,0 +1,39 @@
+body {
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    background-color: lightgrey;
+}
+
+.border {
+    position: fixed;
+    top: 0;
+    left: 0;
+    border: 18px solid white;
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+.form-class {
+    padding-top: 2px;
+}
+
+#outPopUp {
+    position: absolute;
+    width: 300px;
+    height: 200px;
+    z-index: 15;
+    top: 40%;
+    left: 50%;
+    margin: -100px 0 0 -150px;
+}
+
+.text {
+    font-size: 18px;
+    font-weight: bold;
+    padding: 8px;
+}
+
+padding: 0;
