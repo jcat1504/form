@@ -1,3 +1,5 @@
+//everything for submit button//
+
 function submitForm() {
     var task = myForm.task.value;
     var desc = myForm.description.value;
@@ -7,12 +9,10 @@ function submitForm() {
     };
 
 
-
-    var arrayJSON = localStorage.getItem("formJSON") || "[]";
-    var taskArray = JSON.parse(arrayJSON);
-    taskArray.push(FormData);
-    localStorage.setItem("formJSON", JSON.stringify(taskArray));
-
+    myJSON = JSON.stringify(FormData);
+    localStorage.setItem("formJSON", myJSON);
+    text = localStorage.getItem("formJSON");
+    obj = JSON.parse(text);
 
     addTask(task);
     addDescription(desc);
@@ -20,27 +20,25 @@ function submitForm() {
     return false;
 };
 
+
+//storing task and description in array
 newArray = [task, description];
 
 var taskArray = [];
 var descriptionArray = [];
 
+//creating variables task and description in order to save user's input, we use getElementById and get from input field
 var task = document.getElementById("task").value;
 var description = document.getElementById("description").value;
 
-
-
+//adding new input into task array. 
 function addTask(task) {
-    taskArray.push([task]);
-
-    console.log("Tasks: " + taskArray.join(",  "));
-    localStorage.setItem("formJSON", JSON.stringify(taskArray, null));
-
+    taskArray.push(task);
+    console.log("Tasks: " + taskArray.join(", "));
 }
 
+//adding new input into description array
 function addDescription(description) {
-    descriptionArray.push([description]);
-
+    descriptionArray.push(description);
     console.log("Description: " + descriptionArray.join(", "));
-    localStorage.setItem("formJSON", JSON.stringify(descriptionArray, null));
-};
+}
