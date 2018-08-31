@@ -42,3 +42,15 @@ function addDescription(description) {
     descriptionArray.push(description);
     console.log("Description: " + descriptionArray.join(", "));
 }
+
+//CSS stuff
+
+function backgroundColor() {
+    var x = document.getElementsByClassName("border");
+    for (i = 0; i < x.length; i++) {
+        x[i].style.backgroundColor = "lightGrey";
+    }
+};
+
+
+backgroundColor();
