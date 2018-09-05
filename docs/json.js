@@ -43,7 +43,7 @@ function addDescription(description) {
     console.log("Description: " + descriptionArray.join(", "));
 }
 
-//CSS stuff
+//bsckground color
 
 function backgroundColor() {
     var x = document.getElementsByClassName("border");
@@ -51,6 +51,4 @@ function backgroundColor() {
         x[i].style.backgroundColor = "lightGrey";
     }
 };
-
-
 backgroundColor();
