@@ -20,6 +20,25 @@ function submitForm() {
     return false;
 };
 
+//everything for clear button//
+function reset() {
+    var task = document.getElementById("task").value;
+    var description = document.getElementById("description").value;
+
+    var FormData = {
+        task: task,
+        description: desc
+    };
+
+
+    myJSON = JSON.stringify(FormData);
+    localStorage.setItem("formJSON", myJSON);
+    text = localStorage.getItem("formJSON");
+    obj = JSON.parse(text);
+
+    task.clear();
+    description.clear();
+}
 
 //storing task and description in array
 newArray = [task, description];
@@ -43,12 +62,13 @@ function addDescription(description) {
     console.log("Description: " + descriptionArray.join(", "));
 }
 
-//bsckground color
+//CSS stuff
 
 function backgroundColor() {
-    var x = document.getElementsByClassName("border");
-    for (i = 0; i < x.length; i++) {
-        x[i].style.backgroundColor = "lightGrey";
+    var background = document.getElementsByClassName("background");
+    for (i = 0; i < background.length; i++) {
+        background[i].style.backgroundColor = "lightGrey";
     }
 };
+
 backgroundColor();

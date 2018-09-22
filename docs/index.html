@@ -4,25 +4,29 @@
 <title>Task Form</title>
 
 <body>
-    <form class="form-inline" name="myForm" onsubmit=" return submitForm()">
-        <label class="required">*Task and Description* </label>
+    <!--changing the background color-->
+    <div class="background">
+        <!--tasks and description code-->
+        <center>
+            <div id="outPopUp">
+                <form class="form-inline" name="myForm" onsubmit=" return submitForm()">
+                    <!first text box>
+                    <div class="text">Tasks</div>
+                    <div class="form-group"><input type="text" id="task" placeholder="Task"></div>
+                    <!second comment box>
+                    <div class="text">Description</div>
+                    <div class="form-group"><input type="text" id="description" placeholder="Description"></div>
 
-        <!first text box>
-        <div class="form-group">
-            <input type="text" id="task" placeholder="Task">
-        </div>
-
-        <!second comment box>
-        <div class="form-group">
-            <input type="text" id="description" placeholder="Description">
-        </div>
-        <button type="submit" class="btn btn-default submit">Submit</button>
-    </form>
-
-
-
-    <script type="text/javascript " src="json.js "></script>
-
+                    <!--submit button-->
+                    <br><button type="submit" class="submit">Submit</button>
+                    <button type="reset" class="reset"> Clear</button>
+                </form>
+            </div>
+            <link rel="stylesheet" type="text/css" href="stylesheet.css">
+            <script type="text/javascript" src="json.js ">
+            </script>
+        </center>
+    </div>
 </body>
 
 </html>
